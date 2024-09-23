@@ -1,38 +1,134 @@
-.App {
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #F4F7F6;
+  color: black;
+}
+
+header {
+  background-color: #0A74DA;
+  padding: 1rem 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
   color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links li a:hover {
+  color: tan;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+html {
+  scroll-behavior: smooth;
+}
+
+
+.section {
+  padding: 100px 0;
+  text-align: center;
+}
+
+h1 {
+  color: #0A74DA;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+#about {
+  background: linear-gradient(to right, #0A74DA, #00CC99);
+  color: white;
+  padding: 100px 0;
+}
+
+#about p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 2rem;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  color: #0A74DA;
+}
+
+.project-card p {
+  color: black;
+}
+
+.project-card a {
+  color: #00CC99;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+
+.blog-post {
+  background-color: tan ;
+  color: black;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.blog-post h2 {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .nav-links li {
+    margin-right: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .projects-container {
+    grid-template-columns: 1fr;
   }
 }
